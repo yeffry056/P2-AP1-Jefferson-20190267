@@ -1,4 +1,6 @@
-﻿using System;
+﻿using P2_AP1_Jefferson_20190267.UI.Consultas;
+using P2_AP1_Jefferson_20190267.UI.Registros;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +25,23 @@ namespace P2_AP1_Jefferson_20190267
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void RegistroProyecto_Click(object sender, RoutedEventArgs e)
+        {
+            rTarea t = new rTarea();
+            t.Show();
+        }
+
+        private void ConsultaProyecto_Click_1(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void Consulta_Click(object sender, RoutedEventArgs e)
+        {
+            cTarea c = new cTarea();
+            c.Show();
         }
     }
 }

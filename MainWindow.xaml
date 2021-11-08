@@ -7,6 +7,23 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Menu Height="23" Width="62" VerticalAlignment="Top">
+                    <MenuItem Header="Registros">
+                        <MenuItem Header="Registro Proyecto" Click="RegistroProyecto_Click"/>
+                        
+                    </MenuItem>
+                </Menu>
+                <Menu Height="23" Width="737" VerticalAlignment="Top">
+                    <MenuItem Header="Consultas">
 
+                        <MenuItem Header="Consulta Proyecto " Click="Consulta_Click" />
+                    </MenuItem>
+                </Menu>
+
+            </StackPanel>
+            <Image Height="411" Width="800"  Stretch="Fill" Source="/Resources/Fondo.jpg"/>
+        </StackPanel>
     </Grid>
 </Window>
