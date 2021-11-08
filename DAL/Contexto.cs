@@ -10,7 +10,7 @@ namespace P2_AP1_Jefferson_20190267.DAL
 {
     public class Contexto : DbContext
     {
-        
+        public DbSet<Tarea> Tarea { get; set; }
         public DbSet<TipoTarea> TipoTarea { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

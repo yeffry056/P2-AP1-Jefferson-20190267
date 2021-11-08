@@ -15,7 +15,7 @@ namespace P2_AP1_Jefferson_20190267.Entidades
         public String Requerimiento { get; set; }
         public int Tiempo { get; set; }
         public int TiempoTotal { get; set; }
-        public int TareaId { get; set; }
+        public int ProyectoId { get; set; }
 
         [ForeignKey("TipoId")]
         public TipoTarea tipoTarea { get; set; }

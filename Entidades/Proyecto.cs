@@ -8,14 +8,14 @@ using System.Threading.Tasks;
 
 namespace P2_AP1_Jefferson_20190267.Entidades
 {
-    public class Tarea
+    public class Proyecto
     {
         [Key]
-        public int TareaId { get; set; }
+        public int ProyectoId { get; set; }
         public DateTime Fecha { get; set; } = DateTime.Now;
         public String Descripcion { get; set; }
 
-        [ForeignKey("TareaId")]
-       // public List<> MyProperty { get; set; }
+        [ForeignKey("ProyectoId")]
+        public List<DetalleTarea> Detalle { get; set; } = new List<DetalleTarea>();
     }
 }
