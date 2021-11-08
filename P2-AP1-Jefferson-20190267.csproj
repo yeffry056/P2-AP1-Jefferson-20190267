@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <RootNamespace>P2_AP1_Jefferson_20190267</RootNamespace>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="BLL\" />
+    <Folder Include="DATA\" />
+    <Folder Include="Entidades\" />
+    <Folder Include="DAL\" />
+    <Folder Include="Resources\" />
+    <Folder Include="UI\Consultas\" />
+    <Folder Include="UI\Reportes\" />
+    <Folder Include="UI\Registros\" />
+  </ItemGroup>
+
+</Project>
