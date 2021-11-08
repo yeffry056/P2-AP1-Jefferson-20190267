@@ -8,10 +8,10 @@
         Title="Registro Proyecto" Height="554" Width="604" Icon="/Resources/icono.icon.png">
     <Grid>
         <Label Content="ProyectoId" HorizontalAlignment="Left" Margin="18,17,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="21,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding TareaId}"/>
+        <TextBox HorizontalAlignment="Left" Margin="21,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding ProyectoId}"/>
         <Label Content="Fecha" HorizontalAlignment="Left" Margin="18,64,0,0" VerticalAlignment="Top"/>
         <DatePicker HorizontalAlignment="Left" Margin="21,87,0,0" VerticalAlignment="Top" Width="120" SelectedDate="{Binding Fecha}"/>
-        <Button Click="BtnBuscar" Margin="155,35,379,477">
+        <Button  Margin="155,35,379,477" Click="BtnBuscar">
             <StackPanel Orientation="Horizontal">
                 <Image Source="/Resources/buscar.png" Height="21" Width="23" />
                 <Label Content="Buscar" Margin="-3,-3,0,0"/>
@@ -35,7 +35,7 @@
                         <ComboBox x:Name="TareaComboBox" Width="122" SelectedValue="{Binding TipoId}"/>
                         <TextBox x:Name="TextRequerimiento" Width="202" Margin="14,0,0,0" Text="{Binding Detalle.Requerimiento}"/>
                         <TextBox x:Name="TextMinutos" Width="115" Margin="15,0,0,0" Text="{Binding Detalle.Tiempo}"/>
-                        <Button Margin="3,0,0,0" Click="BtnAgregarFila">
+                        <Button Margin="3,0,0,0" Click="BtnAgregarFila" >
                             <StackPanel Orientation="Horizontal">
                                 <Image Source="/Resources/BtnAgregar.png" Height="20" Width="22" />
                                 <Label Content="Agregar" Margin="-3,-4.5,0,0"/>
@@ -45,7 +45,7 @@
                     <StackPanel HorizontalAlignment="Left" Width="547" Height="141">
                         <DataGrid x:Name="DetalleDataGrid" ItemsSource="{Binding Detalle}" Height="141" AutoGenerateColumns="False" Width="547" HorizontalAlignment="Left" >
                             <DataGrid.Columns>
-                                <DataGridTextColumn Header="Tarea Id" Binding="{Binding TareaId}" Visibility="Hidden"  />
+                                <DataGridTextColumn Header="Proyecto Id" Binding="{Binding ProyectoId}" Visibility="Hidden"  />
                                 <DataGridTextColumn Header="TipoId" Binding="{Binding TipoTareaa.TipoId}" Width="100" />
                                 <DataGridTextColumn Header="Tipo Tarea" Binding="{Binding TipoTareaa.TipoTareaa}" IsReadOnly="True" Width="145"/>
                                 <DataGridTextColumn Header="Requerimiento" Binding="{Binding Requerimiento}" Width="200"/>
@@ -57,7 +57,7 @@
                     </StackPanel>
 
                     <StackPanel Orientation="Horizontal" Height="30">
-                        <Button x:Name="RemoverFilaButton"   Width="115" VerticalAlignment="Top" Height="28" Click="BtnRemoverFila">
+                        <Button x:Name="RemoverFilaButton"   Width="115" VerticalAlignment="Top" Height="28" Click="BtnRemoverFila" >
                             <StackPanel Orientation="Horizontal">
                                 <Image Source="/Resources/BtnRemover.png" />
                                 <Label Content="Eliminar fila"/>
@@ -80,13 +80,13 @@
                         <Label Content="Nuevo" Margin="-3,-4.5,0,0"/>
                     </StackPanel>
                 </Button>
-                <Button Width="69" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,8,0,0" Click="BtnGuardar">
+                <Button Width="69" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,8,0,0" Click="BtnGuardar" >
                     <StackPanel Orientation="Horizontal">
                         <Image Source="/Resources/Guardar.png" Height="20" Width="22" />
                         <Label Content="Guardar" Margin="-3,-4.5,0,0"/>
                     </StackPanel>
                 </Button>
-                <Button Width="73" VerticalAlignment="Bottom" Margin="10,8,0,0" Click="BtnEliminar">
+                <Button Width="73" VerticalAlignment="Bottom" Margin="10,8,0,0" Click="BtnEliminar" >
                     <StackPanel Orientation="Horizontal">
                         <Image Source="/Resources/Eliminar.png" Height="20" Width="22" />
                         <Label Content="Eliminar" Margin="-3,-4.5,0,0"/>
