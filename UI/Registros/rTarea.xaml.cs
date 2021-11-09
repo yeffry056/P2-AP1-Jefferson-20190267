@@ -60,8 +60,8 @@ namespace P2_AP1_Jefferson_20190267.UI.Registros
                 return esValido;
 
             }
-            
 
+            return esValido;
         }
         private void BtnBuscar(object sender, RoutedEventArgs e)
         {
