@@ -23,7 +23,7 @@
                 <StackPanel Margin="5,0">
                     <Label Content="Filtro:" />
                     <ComboBox x:Name="FiltroComboBox" Width="100">
-                        <ComboBoxItem Content="UsuarioId"/>
+                        <ComboBoxItem Content="ProyectoId"/>
                         <ComboBoxItem Content="Nombre"/>
                     </ComboBox>
                 </StackPanel>

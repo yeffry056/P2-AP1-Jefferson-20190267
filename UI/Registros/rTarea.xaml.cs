@@ -65,6 +65,7 @@ namespace P2_AP1_Jefferson_20190267.UI.Registros
         }
         private void BtnBuscar(object sender, RoutedEventArgs e)
         {
+           
             var encontrado = ProyectoBLL.Buscar(proyecto.ProyectoId);
 
             if(encontrado != null)
@@ -91,6 +92,7 @@ namespace P2_AP1_Jefferson_20190267.UI.Registros
             }) ;
 
             Cargar();
+            TextTotal.Text = Convert.ToString(proyecto.Detalle.Sum(e => e.Tiempo)); 
 
             TextRequerimiento.Focus();
             TextRequerimiento.Clear();
