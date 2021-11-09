@@ -8,17 +8,17 @@
         Title="Registro Proyecto" Height="554" Width="604" Icon="/Resources/icono.icon.png">
     <Grid>
         <Label Content="ProyectoId" HorizontalAlignment="Left" Margin="18,17,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="21,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding ProyectoId}"/>
+        <TextBox x:Name="TextProyectoId" HorizontalAlignment="Left" Margin="21,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding ProyectoId}"/>
         <Label Content="Fecha" HorizontalAlignment="Left" Margin="18,64,0,0" VerticalAlignment="Top"/>
-        <DatePicker HorizontalAlignment="Left" Margin="21,87,0,0" VerticalAlignment="Top" Width="120" SelectedDate="{Binding Fecha}"/>
-        <Button  Margin="155,35,379,477" Click="BtnBuscar">
+        <DatePicker x:Name="DataFecha" HorizontalAlignment="Left" Margin="21,87,0,0" VerticalAlignment="Top" Width="120" SelectedDate="{Binding Fecha}"/>
+        <Button  Margin="155,35,0,0" Click="BtnBuscar" HorizontalAlignment="Left" Width="70" Height="26" VerticalAlignment="Top">
             <StackPanel Orientation="Horizontal">
                 <Image Source="/Resources/buscar.png" Height="21" Width="23" />
                 <Label Content="Buscar" Margin="-3,-3,0,0"/>
             </StackPanel>
         </Button>
         <Label Content="Descripcion del proyecto" HorizontalAlignment="Left" Margin="18,120,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="21,145,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="556" Height="50" Text="{Binding Descripcion}"/>
+        <TextBox x:Name="TextDescripcion" HorizontalAlignment="Left" Margin="21,145,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="556" Height="50" Text="{Binding Descripcion}"/>
 
 
         <StackPanel Orientation="Vertical" Margin="0,209,0,0" HorizontalAlignment="Center" Width="572" Height="248" VerticalAlignment="Top">
@@ -46,12 +46,12 @@
                         <DataGrid x:Name="DetalleDataGrid" ItemsSource="{Binding Detalle}" Height="141" AutoGenerateColumns="False" Width="547" HorizontalAlignment="Left" >
                             <DataGrid.Columns>
                                 <DataGridTextColumn Header="Proyecto Id" Binding="{Binding ProyectoId}" Visibility="Hidden"  />
-                                <DataGridTextColumn Header="TipoId" Binding="{Binding TipoTareaa.TipoId}" Width="100" />
-                                <DataGridTextColumn Header="Tipo Tarea" Binding="{Binding TipoTareaa.TipoTareaa}" IsReadOnly="True" Width="145"/>
+                                <DataGridTextColumn Header="TipoId" Binding="{Binding tipoTarea.TipoId}" Width="100" />
+                                <DataGridTextColumn Header="Tipo Tarea" Binding="{Binding tipoTarea.TipoTareaa}" IsReadOnly="True" Width="145"/>
                                 <DataGridTextColumn Header="Requerimiento" Binding="{Binding Requerimiento}" Width="200"/>
-                               
+
                                 <DataGridTextColumn Header="Tiempo" Binding="{Binding Tiempo}" Width="100"/>
-                                
+
                             </DataGrid.Columns>
                         </DataGrid>
                     </StackPanel>

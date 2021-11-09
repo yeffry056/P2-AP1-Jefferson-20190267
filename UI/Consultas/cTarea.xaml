@@ -34,7 +34,7 @@
 
                 </StackPanel>
 
-                <Button x:Name="BuscarButton" Height="30" Width="66"  Margin="0,2,0,0" VerticalAlignment="Center" >
+                <Button x:Name="BuscarButton" Height="30" Width="66"  Margin="0,2,0,0" VerticalAlignment="Center" Click="BtnConsulta" >
                     <StackPanel Orientation="Horizontal" >
                         <Image Source="/Resources/Buscar.png" Height="20" Width="18"  />
                         <Label Content="Buscar" />

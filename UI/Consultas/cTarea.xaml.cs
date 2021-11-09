@@ -25,7 +25,37 @@ namespace P2_AP1_Jefferson_20190267.UI.Consultas
         {
             InitializeComponent();
         }
-        
-        
+
+        private void BtnConsulta(object sender, RoutedEventArgs e)
+        {
+            var listado = new List<Proyecto>();
+
+            if(CriterioTextBox.Text.Trim().Length > 0)
+            {
+                switch (FiltroComboBox.SelectedIndex)
+                {
+                    case 0:
+                        listado = ProyectoBLL.GetList(e => e.ProyectoId == Utilidades.ToInt(CriterioTextBox.Text));
+                        break;
+                    case 1:
+                        listado = ProyectoBLL.GetList(e => e.Descripcion.ToLower().Contains(CriterioTextBox.Text.ToLower()));
+                        break;
+                }
+            }
+            else
+            {
+                listado = ProyectoBLL.GetList(c => true);
+            }
+
+            if (DesdeDataPicker.SelectedDate != null)
+                listado = ProyectoBLL.GetList(c => c.Fecha.Date >= DesdeDataPicker.SelectedDate);
+
+            if (HastaDatePicker.SelectedDate != null)
+                listado = ProyectoBLL.GetList(c => c.Fecha.Date <= HastaDatePicker.SelectedDate);
+
+            DatosDataGrid.ItemsSource = null;
+            DatosDataGrid.ItemsSource = listado;
+
+        }
     }
 }

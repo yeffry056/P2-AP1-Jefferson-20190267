@@ -43,6 +43,26 @@ namespace P2_AP1_Jefferson_20190267.UI.Registros
             this.proyecto = new Proyecto();
             this.DataContext = proyecto;
         }
+        private bool Validar()
+        {
+            bool esValido = true;
+            if(TextProyectoId.Text.Length == 0)
+            {
+                esValido = false;
+                MessageBox.Show("Transaccion Fallida", "Fallo", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return esValido;
+
+            }
+            if (TextDescripcion.Text.Length == 0)
+            {
+                esValido = false;
+                MessageBox.Show("Transaccion Fallida", "Fallo", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return esValido;
+
+            }
+            
+
+        }
         private void BtnBuscar(object sender, RoutedEventArgs e)
         {
             var encontrado = ProyectoBLL.Buscar(proyecto.ProyectoId);
@@ -94,6 +114,8 @@ namespace P2_AP1_Jefferson_20190267.UI.Registros
 
         private void BtnGuardar(object sender, RoutedEventArgs e)
         {
+            if (!Validar())
+                return;
             var paso = ProyectoBLL.Guardar(proyecto);
 
             if (paso)
