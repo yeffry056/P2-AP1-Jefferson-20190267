@@ -19,6 +19,7 @@
                     <MenuItem Header="Consultas">
 
                         <MenuItem Header="Consulta Proyecto " Click="Consulta_Click" />
+                        <MenuItem Header="Consulta Tipo Tarea " Click="ConsultaTipoTarea" />
                     </MenuItem>
                 </Menu>
 

@@ -72,6 +72,7 @@ namespace P2_AP1_Jefferson_20190267.UI.Registros
             {
                 proyecto = encontrado;
                 Cargar();
+                TextTotal.Text = proyecto.Detalle.Sum(x => x.Tiempo).ToString();
             }
             else
             {

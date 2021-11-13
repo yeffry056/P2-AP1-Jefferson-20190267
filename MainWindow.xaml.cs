@@ -33,15 +33,18 @@ namespace P2_AP1_Jefferson_20190267
             t.Show();
         }
 
-        private void ConsultaProyecto_Click_1(object sender, RoutedEventArgs e)
-        {
-            
-        }
+       
 
         private void Consulta_Click(object sender, RoutedEventArgs e)
         {
             cTarea c = new cTarea();
             c.Show();
+        }
+
+        private void ConsultaTipoTarea(object sender, RoutedEventArgs e)
+        {
+            cTipoTarea t = new cTipoTarea();
+            t.Show();
         }
     }
 }

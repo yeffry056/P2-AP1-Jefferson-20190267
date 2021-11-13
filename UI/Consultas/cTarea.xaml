@@ -24,7 +24,7 @@
                     <Label Content="Filtro:" />
                     <ComboBox x:Name="FiltroComboBox" Width="100">
                         <ComboBoxItem Content="ProyectoId"/>
-                        <ComboBoxItem Content="Nombre"/>
+                        <ComboBoxItem Content="Descripcion"/>
                     </ComboBox>
                 </StackPanel>
 

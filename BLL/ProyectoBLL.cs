@@ -27,12 +27,12 @@ namespace P2_AP1_Jefferson_20190267.BLL
             try
             {
                 contexto.Proyecto.Add(proyecto);
-                List<DetalleTarea> lista = proyecto.Detalle;
+                
 
                 foreach(var detalle in proyecto.Detalle)
                 {
                     contexto.Entry(detalle.tipoTarea).State = EntityState.Modified;
-                    detalle.TiempoTotal = lista.Sum(e => e.Tiempo);
+                    detalle.TiempoTotal = proyecto.Detalle.Sum(e => e.Tiempo);
                 }
 
                 paso = contexto.SaveChanges() > 0; 
@@ -108,14 +108,14 @@ namespace P2_AP1_Jefferson_20190267.BLL
            
             try
             {
-                List<DetalleTarea> detalle = Buscar(proyecto.ProyectoId).Detalle;
+              
 
                 contexto.Database.ExecuteSqlRaw($"Delete FROM DetalleTarea Where ProyectoId={proyecto.ProyectoId}");
                 foreach (var item in proyecto.Detalle)
                 {
                     contexto.Entry(item).State = EntityState.Added;
                 }
-                List<DetalleTarea> Nuevo = proyecto.Detalle;
+               
 
                 contexto.Entry(proyecto).State = EntityState.Modified;
                 paso = contexto.SaveChanges() > 0;

@@ -93,7 +93,7 @@
                     </StackPanel>
                 </Button>
                 <Label Content="Tiempo Total" Margin="120,0,0,0"/>
-                <TextBox x:Name="TextTotal" Width="114" Height="23" Margin="0,-8,0,0"    />
+                <TextBox x:Name="TextTotal" Width="114" Height="23" Margin="0,-8,0,0"  Text="{Binding Detalle.TiempoTotal}"  />
             </StackPanel>
 
         </StackPanel>
